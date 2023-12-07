@@ -1,8 +1,9 @@
 /* General Styles */
 body {
-  background-color: #021114; /* Dark blue background color */
-  color: #5091c0; /* Updated light blueish text color */
+  background-color: #101040; /* Dark blue background */
+  color: #b3d9ff; /* Soft blue text color for readability with a neon touch */
   font-family: "VT323", "Press Start 2P", cursive;
+  font-size: larger;
 }
 
 /* Blinking Cursor Animation */
@@ -21,13 +22,13 @@ body {
   animation: blink 1s step-start infinite;
   display: inline-block;
   width: 10px;
-  background-color: #5091c0; /* Cursor color to match the text */
+  background-color: #b3d9ff; /* Cursor color to match the text */
 }
 
 /* Neon Glow Effect on Text */
 .neon-text {
-  text-shadow: 0 0 5px #5091c0, 0 0 10px #5091c0, 0 0 20px #5091c0,
-    0 0 40px #5091c0; /* Updated glow effect color */
+  color: #b3d9ff; /* Soft blue text color for readability with a neon touch */
+  text-shadow: 0 0 1px #5091c0, /* Reduced inner glow */ 0 0 2px #5091c0; /* Reduced outer glow for a crisper effect */
 }
 
 /* HTML Structure */
