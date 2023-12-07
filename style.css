@@ -1,9 +1,54 @@
 /* General Styles */
 body {
-  background-color: #101040; /* Dark blue background */
-  color: #b3d9ff; /* Soft blue text color for readability with a neon touch */
-  font-family: "VT323", "Press Start 2P", cursive;
+  background-color: #101040;
+  color: #b3d9ff;
+  font-family: "VT323", "Press Start 2P", sans-serif;
   font-size: larger;
+}
+
+section {
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Orbitron", "VT323", sans-serif;
+}
+
+button {
+  background-color: #b3d9ff;
+  color: #101040;
+  font-size: large;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #9cbbdb;
+}
+button:active {
+  background-color: #76a0ca;
+}
+
+#home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+#computer-section {
+  display: none;
+}
+
+#button-container {
+  padding: 10px;
+}
+
+.neon-text {
+  color: #b3d9ff;
+  text-shadow: 0 0 1px #5091c0, /*  inner glow */ 0 0 2px #5091c0; /*outer glow */
 }
 
 /* Blinking Cursor Animation */
@@ -23,16 +68,4 @@ body {
   display: inline-block;
   width: 10px;
   background-color: #b3d9ff; /* Cursor color to match the text */
-}
-
-/* Neon Glow Effect on Text */
-.neon-text {
-  color: #b3d9ff; /* Soft blue text color for readability with a neon touch */
-  text-shadow: 0 0 1px #5091c0, /* Reduced inner glow */ 0 0 2px #5091c0; /* Reduced outer glow for a crisper effect */
-}
-
-/* HTML Structure */
-section {
-  margin: 20px;
-  padding: 20px;
 }
