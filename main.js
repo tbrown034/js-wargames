@@ -7,6 +7,7 @@ const playButton = document.getElementById("play-button");
 const aboutButton = document.getElementById("about-button");
 const computerSection = document.getElementById("computer-section");
 const gameSection = document.getElementById("game-section");
+const shallInput = document.getElementById("shall-input");
 
 // helper functions
 
