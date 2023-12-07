@@ -40,6 +40,8 @@ button:active {
 
 #computer-section {
   display: none;
+  gap: 10px;
+  flex-direction: column;
 }
 
 #button-container {
