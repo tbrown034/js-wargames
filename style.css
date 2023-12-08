@@ -3,7 +3,7 @@ body {
   background-color: #101040;
   color: #b3d9ff;
   font-family: "VT323", "Press Start 2P", sans-serif;
-  font-size: x-large;
+  font-size: 30px;
 }
 
 section {
@@ -21,6 +21,7 @@ button {
   font-size: large;
   border-radius: 10px;
   padding: 10px;
+  width: fit-content;
 }
 
 button:hover {
@@ -48,12 +49,17 @@ button:active {
   padding: 10px;
 }
 
+#input-button-container {
+  display: flex;
+  gap: 5px;
+}
+
 .neon-text {
   color: #b3d9ff;
   text-shadow: 0 0 1px #5091c0, /*  inner glow */ 0 0 2px #5091c0; /*outer glow */
 }
 
-#shall-input {
+.my-inputs {
   width: fit-content;
   padding: 5px;
   background-color: #101240;
