@@ -85,8 +85,11 @@ const showGames = () => {
 const goBack = () => {
   // setTimeout();
   console.log("goback");
+  if (computerSection.style.display === "flex") {
+    computerSection.style.display = "none";
+    shallInput.value = "";
+  }
 
-  computerSection.innerHTML = "";
   homeSection.style.display = "flex";
 
   // reattach event listeners
