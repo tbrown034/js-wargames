@@ -29,6 +29,19 @@ const handleAboutButton = () => {
   console.log("about");
 };
 
+const goBack = () => {
+  // setTimeout();
+  console.log("goback");
+  if (computerSection.style.display === "flex") {
+    computerSection.style.display = "none";
+    shallInput.value = "";
+  }
+
+  homeSection.style.display = "flex";
+
+  // reattach event listeners
+};
+
 const selectGame = (inputElement) => {
   const newMessage = document.createElement("div");
   let playerInput = inputElement.value;
@@ -67,11 +80,13 @@ const showGames = () => {
   gamesContainer.append(newDiv);
   const input = document.createElement("input");
   input.setAttribute("class", "my-inputs");
-  const button = document.createElement("button");
-  button.innerText = "Confirm";
+  const confirmButton = document.createElement("button");
+  confirmButton.innerText = "Confirm";
+  const backButton = document.createElement("button");
+  backButton.innerText = "Back";
 
   // Set up event listeners
-  button.addEventListener("click", () => selectGame(input));
+  confirmButton.addEventListener("click", () => selectGame(input));
   input.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       selectGame(input);
@@ -79,20 +94,7 @@ const showGames = () => {
   });
 
   newDiv.append(input);
-  newDiv.append(button);
-};
-
-const goBack = () => {
-  // setTimeout();
-  console.log("goback");
-  if (computerSection.style.display === "flex") {
-    computerSection.style.display = "none";
-    shallInput.value = "";
-  }
-
-  homeSection.style.display = "flex";
-
-  // reattach event listeners
+  newDiv.append(confirmButton, backButton);
 };
 
 const confirmInput = () => {
@@ -103,9 +105,6 @@ const confirmInput = () => {
       "That is good to hear. Now select from the list of games below:";
     showGames();
   } else if (shallInput.value === "n" || shallInput.value === "N") {
-    newMessage.textContent =
-      "I'm sorry to hear that. But it's probably a wise decision. We'll take you back now:";
-
     goBack();
   } else {
     alert("Invalid Entry");
